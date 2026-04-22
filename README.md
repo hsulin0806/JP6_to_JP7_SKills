@@ -162,7 +162,3 @@ openclaw gateway restart
 2. 更新本 README（至少補上 skill 清單與必要說明）
 3. 提交並推送到 GitHub：`https://github.com/hsulin0806/JP6_to_JP7_SKills`
 4. 在新環境重新執行 `bash scripts/install-skills.sh`
-
----
-
-如果你想把這套流程做成「一行指令安裝」，可再加上 bootstrap 腳本（例如 curl + bash），但建議先維持目前這種透明可檢查的方式。
