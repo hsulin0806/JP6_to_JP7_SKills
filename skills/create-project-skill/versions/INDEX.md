@@ -1,16 +1,10 @@
----
-
-# 11. `versions/INDEX.md`
-
-```markdown
 # create-project-skill Version Index
 
 ## Description
 
-This file is used to record important version changes to `create-project-skill` itself.
+This file tracks important version updates to `create-project-skill` itself.
 
-If the update only affects the output content of an individual project skill, it should be recorded under that project's own `versions/`.
-If the templates, prompts, or rules of `create-project-skill` itself are changed, record the change here.
+If a change only affects one generated project skill instance, record it under that project's own `versions/`.
 
 ---
 
@@ -21,18 +15,34 @@ If the templates, prompts, or rules of `create-project-skill` itself are changed
 - Created `prompts/intake.md`
 - Created `prompts/skill_builder.md`
 - Created `prompts/merger.md`
-- Created the templates related to project skills
-- Created the version entry template
-- Created this index
+- Created project-skill templates
+- Created `templates/version_entry_template.md`
+- Created `versions/INDEX.md`
 
 ### Core Capabilities
 - Create project skills
 - Update existing project skills
 - Preserve failure knowledge
-- Preserve the correction layer
+- Preserve correction layer
 - Support versioning
 
 ### Notes
-- The first version focuses on OpenClaw project handoff
-- Persona imitation is not handled for now
-- The core focus is project skills rather than persona
+- Initial release focuses on OpenClaw project handoff
+- Focus is project execution knowledge transfer
+
+---
+
+## v1.0.1
+
+### Contents
+- Fixed markdown wrapper and leading delimiter issue in `prompts/merger.md`
+- Removed non-content wrapper from `prompts/skill_builder.md`
+- Rebuilt `prompts/skill_builder.md` into valid, complete standalone prompt
+- Normalized `versions/INDEX.md` to plain markdown format
+
+### Core Improvements
+- Avoid YAML parser errors caused by malformed markdown wrappers
+- Ensure prompt files are directly consumable as plain markdown
+
+### Notes
+- This update is format/quality focused and keeps the same functional scope

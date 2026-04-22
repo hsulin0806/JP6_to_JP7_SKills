@@ -1,13 +1,8 @@
----
-
-## `prompts/skill_builder.md`
-
-```markdown
 # skill_builder
 
-Your task is to build a complete OpenClaw project skill based on the structured input from `intake` and the project's source materials.
+Your task is to build a complete OpenClaw project skill from structured intake output and project source materials.
 
-What you need to produce is not an ordinary summary, but a set of project knowledge files that are handoff-ready, verifiable, updatable, and rollback-capable.
+Do not write a generic summary. Build handoff-ready, verifiable, update-friendly, rollback-friendly project knowledge files.
 
 ---
 
@@ -17,7 +12,7 @@ Under:
 
 `~/.openclaw/workspace/skills/projects/<project-slug>/`
 
-generate the following files:
+generate:
 
 1. `SKILL.md`
 2. `QUICKSTART.md`
@@ -29,57 +24,35 @@ generate the following files:
 8. `ENVIRONMENT.md`
 9. `SOURCES.md`
 10. `CORRECTIONS.md`
-
-Create the following when necessary:
-
-11. `versions/`
+11. `versions/` (when applicable)
 
 ---
 
 ## Core Principles
 
-### Principle 1: Only write content that has source support
-Every key conclusion must be traceable to one of the following:
+### Principle 1: Source-backed content only
+Every key conclusion must map to evidence (docs, logs, scripts, Dockerfile, validation artifacts, or explicit user requirements).
 
-- Documentation
-- Logs
-- Scripts
-- Dockerfile
-- Validation materials
-- Explicit requirements provided by the user
+### Principle 2: Preserve failure knowledge
+Capture failure paths, error signals, root causes, rejected approaches, and final effective fixes.
 
-If there is no supporting source, do not write it as an established fact.
+### Principle 3: Optimize for next-agent takeover
+Prioritize fast takeover: what to read first, run first, validate first, and avoid first.
 
-### Principle 2: Do not write only the happy path
-You must extract as much of the following as possible:
+### Principle 4: Centralize success criteria
+Keep completion criteria in `VALIDATION_RULES.md`.
 
-- Failure paths
-- Error signals
-- Root cause analysis
-- Elimination methods
-- The final effective solution
-
-### Principle 3: Prioritize handoff to the next AI Agent
-Your output is not meant to read nicely as a narrative. It is meant to allow the next AI Agent to quickly understand:
-
-- What to read first
-- What to validate first
-- What to avoid first
-
-### Principle 4: Keep validation rules in a dedicated file
-All success criteria must be centralized in `VALIDATION_RULES.md` and must not be scattered across multiple files.
-
-### Principle 5: Source transparency
-All important content should be traceable through `SOURCES.md` and `EVIDENCE_INDEX.md`.
+### Principle 5: Keep traceability
+Keep source traceability through `SOURCES.md` and `EVIDENCE_INDEX.md`.
 
 ---
 
 ## Build Process
 
-### Step 1: Read the intake result
-First understand:
+### Step 1: Validate intake
+Confirm intake includes:
 
-- mode
+- mode (`create`)
 - project slug
 - project goal
 - target platform
@@ -87,46 +60,105 @@ First understand:
 - available sources
 - known gaps
 
-If the mode is not `create`, do not enter the new-build flow.
+If mode is not `create`, stop and route to update/correction flow.
 
-### Step 2: Read source materials
-Read the following in priority order:
-
+### Step 2: Read sources in priority order
 1. `validation/`
 2. `logs/COMMAND_LOG.md`
 3. `logs/DECISION_LOG.md`
-4. migration / docs
+4. migration/technical docs
 5. `README.md`
-6. `Dockerfile` / scripts
-7. other skills / supplementary sources
+6. `Dockerfile` and scripts
+7. existing skills and supplemental files
 
-At the same time, build a source mapping for later writing into `SOURCES.md`.
+Build source mapping while reading.
 
-### Step 3: Break the project into knowledge sections
-Organize the project information into the following sections:
+### Step 3: Distill into required knowledge sections
+Classify into:
 
-1. Project summary
-2. Target platform and environmental assumptions
-3. Definition of success
-4. Priority order of authoritative sources
-5. Recommended reading order
-6. Quick handoff workflow
-7. Build workflow
-8. First-run workflow
-9. Second-run / offline workflow
-10. Validation rules
-11. Common errors and troubleshooting order
-12. Summary of key decisions
-13. Known limitations
-14. Update procedure
+1. project summary
+2. target platform and environment assumptions
+3. definition of success
+4. source authority order
+5. reading order for handoff
+6. quick handoff flow
+7. build flow
+8. first-run flow
+9. second-run/offline flow
+10. validation rules
+11. troubleshooting and common errors
+12. key decisions
+13. known limitations
+14. update procedure
 
-### Step 4: Generate each file
+### Step 4: Generate each output file
 
-#### 4.1 `SKILL.md`
-Must include:
+#### `SKILL.md`
+Include frontmatter and execution guidance.
+
+Required frontmatter example:
 
 ```text
 name: <project-slug>
-description: <one-sentence description>
+description: <one-sentence purpose>
 version: 1.0.0
 user-invocable: true
+```
+
+#### `QUICKSTART.md`
+Focus on minimal takeover path.
+
+#### `CHECKLIST.md`
+Provide operational validation checklist.
+
+#### `DECISIONS.md`
+Record high-value decisions with problem/options/choice/reason/tradeoff/validation.
+
+#### `FAILURES.md`
+Record symptoms/root-cause/wrong-path/fix/prevention.
+
+#### `VALIDATION_RULES.md`
+Define pass/fail criteria and evidence expectations.
+
+#### `EVIDENCE_INDEX.md`
+Index logs/screenshots/output/artifacts/commits/image tags.
+
+#### `ENVIRONMENT.md`
+Record hardware/software/runtime fingerprint.
+
+#### `SOURCES.md`
+List source path/type/purpose/authority level.
+
+#### `CORRECTIONS.md`
+Initialize correction layer if none exists.
+
+### Step 5: Self-check before completion
+Do not mark complete unless all are true:
+
+1. Success definition exists
+2. Source authority order exists
+3. Validation rules exist
+4. Failure knowledge exists
+5. Evidence index exists
+6. Environment fingerprint exists
+7. Quickstart path exists
+8. Next AI agent can directly take over
+
+### Step 6: Versioning
+Create initial version record (`v1.0.0`) with:
+
+- created files
+- source baseline
+- date
+- summary
+
+---
+
+## Output Requirements
+
+At completion, provide:
+
+1. generated file list
+2. key evidence summary
+3. unresolved gaps (`Data Needed`)
+4. initial version record summary
