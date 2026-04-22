@@ -67,6 +67,23 @@ ls -la ~/.openclaw/workspace/skills
 - `agent-rate-limiter`
 - `lossless-claw`
 
+### 安裝後驗證清單（快速）
+
+```bash
+# 1) 安裝到測試 workspace
+rm -rf /tmp/openclaw-skill-verify
+mkdir -p /tmp/openclaw-skill-verify
+bash scripts/install-skills.sh /tmp/openclaw-skill-verify
+
+# 2) 驗證每個 skill 都有 SKILL.md
+for d in /tmp/openclaw-skill-verify/skills/*; do
+  [ -d "$d" ] || continue
+  [ -f "$d/SKILL.md" ] && echo "OK  $(basename "$d")" || echo "MISS $(basename "$d")"
+done
+```
+
+預期結果：全部顯示 `OK`，沒有 `MISS`。
+
 ## 安裝後怎麼用（重要）
 
 1. 在 OpenClaw 新對話中直接下需求，系統會依 `SKILL.md` 描述自動挑選可用 skill。
@@ -86,6 +103,7 @@ openclaw gateway restart
 - 2026-04-22：已安裝並同步 `agent-rate-limiter`（來源：openclaw/skills）。
 - 2026-04-22：已新增並同步 `lossless-claw`，並更新 `self-improving-agent` 為新版目錄結構。
 - 2026-04-22：已完成 `create-project-skill` 目錄重整（prompts/templates/versions/README 內聚化）並推送到本 repo。
+- 2026-04-22：已在 `/tmp/openclaw-skill-verify` 完成安裝驗證，6/6 skills 均檢查到 `SKILL.md`。
 
 ## 維護流程（新增 skill）
 
