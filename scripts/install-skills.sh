@@ -22,3 +22,4 @@ for skill_dir in "$SRC_SKILLS_DIR"/*; do
 done
 
 echo "Done. Skills installed to: $TARGET_SKILLS_DIR"
+echo "Next: open a new OpenClaw session. If skills still do not appear, run: openclaw gateway restart"

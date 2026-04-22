@@ -49,6 +49,18 @@ ls -la ~/.openclaw/workspace/skills
 - `image-web-collector`
 - `self-improving-agent`
 
+## 安裝後怎麼用（重要）
+
+1. 在 OpenClaw 新對話中直接下需求，系統會依 `SKILL.md` 描述自動挑選可用 skill。
+2. 若你「剛安裝完」但看不到新 skill 被使用，先開一個新 session 再試一次。
+3. 若仍沒生效，重啟 gateway 後再測：
+
+```bash
+openclaw gateway restart
+```
+
+4. 測試方式：下與 skill 描述高度相關的任務（例如 image collection 任務），觀察是否命中該 skill。
+
 ## 最近驗證紀錄
 
 - 2026-04-22：已在 `/home/ubuntu/.openclaw/workspace` 執行安裝腳本並確認 skills 安裝完成。
