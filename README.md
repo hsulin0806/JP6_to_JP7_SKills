@@ -10,6 +10,7 @@
 - `self-improving-agent`
 - `create-project-skill`
 - `agent-rate-limiter`
+- `lossless-claw`
 
 ## 專案結構
 
@@ -52,6 +53,7 @@ ls -la ~/.openclaw/workspace/skills
 - `self-improving-agent`
 - `create-project-skill`
 - `agent-rate-limiter`
+- `lossless-claw`
 
 ## 安裝後怎麼用（重要）
 
@@ -70,6 +72,7 @@ openclaw gateway restart
 - 2026-04-22：已在 `/home/ubuntu/.openclaw/workspace` 執行安裝腳本並確認 skills 安裝完成。
 - 2026-04-22：已從 `/home/ubuntu/Desktop/jp6_to_jp7_skills/skills` 同步並安裝 `create-project-skill`。
 - 2026-04-22：已安裝並同步 `agent-rate-limiter`（來源：openclaw/skills）。
+- 2026-04-22：已新增並同步 `lossless-claw`，並更新 `self-improving-agent` 為新版目錄結構。
 
 ## 維護流程（新增 skill）
 
