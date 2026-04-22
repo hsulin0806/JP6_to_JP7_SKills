@@ -17,6 +17,18 @@
 - `skills/`：每個 skill 一個資料夾（含 `SKILL.md` 與其附屬檔案）
 - `scripts/install-skills.sh`：一鍵安裝到 OpenClaw workspace 的腳本
 
+## 本次整理重點（2026-04-22）
+
+已將原本散落在 `skills/` 根目錄、且屬於 `create-project-skill` 的檔案，整合進可安裝 skill 目錄：
+
+- `skills/create-project-skill/README.md`
+- `skills/create-project-skill/prompts/`
+- `skills/create-project-skill/templates/`
+- `skills/create-project-skill/versions/INDEX.md`
+- `skills/create-project-skill/universal_project_execution_prompt.md`
+
+現在 `create-project-skill` 為完整可攜 skill 套件，安裝後不再依賴外部散落檔案。
+
 ## 快速安裝（給新的 AI / 新環境）
 
 ### 1) 下載專案
@@ -73,6 +85,7 @@ openclaw gateway restart
 - 2026-04-22：已從 `/home/ubuntu/Desktop/jp6_to_jp7_skills/skills` 同步並安裝 `create-project-skill`。
 - 2026-04-22：已安裝並同步 `agent-rate-limiter`（來源：openclaw/skills）。
 - 2026-04-22：已新增並同步 `lossless-claw`，並更新 `self-improving-agent` 為新版目錄結構。
+- 2026-04-22：已完成 `create-project-skill` 目錄重整（prompts/templates/versions/README 內聚化）並推送到本 repo。
 
 ## 維護流程（新增 skill）
 

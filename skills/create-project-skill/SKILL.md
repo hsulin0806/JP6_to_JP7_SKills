@@ -19,6 +19,20 @@ The core goal of this Skill is not to generate a summary, but to produce reusabl
 4. Which paths have failed and should not be repeated
 5. How to continue moving the project forward instead of starting over from scratch
 
+## Bundled Resources (must-use)
+
+Use these files under this skill folder instead of external loose files:
+
+- `prompts/intake.md` - intake and mode classification
+- `prompts/skill_builder.md` - create-mode builder workflow
+- `prompts/merger.md` - update/correction merge workflow
+- `templates/*.md` - canonical output templates for generated project-skill files
+- `versions/INDEX.md` - version changelog for this skill itself
+- `universal_project_execution_prompt.md` - reusable project execution baseline prompt
+- `README.md` - package-level purpose, scenarios, and structure
+
+When creating/updating a project skill, load `prompts/intake.md` first, then choose `skill_builder.md` or `merger.md` by mode.
+
 ---
 
 ## Applicable Scenarios
