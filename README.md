@@ -7,6 +7,7 @@
 
 - `karpathy-guidelines`
 - `image-web-collector`
+- `self-improving-agent`
 
 ## 專案結構
 
@@ -46,6 +47,7 @@ ls -la ~/.openclaw/workspace/skills
 
 - `karpathy-guidelines`
 - `image-web-collector`
+- `self-improving-agent`
 
 ## 最近驗證紀錄
 
@@ -53,9 +55,10 @@ ls -la ~/.openclaw/workspace/skills
 
 ## 維護流程（新增 skill）
 
-1. 把新 skill 放到本 repo 的 `skills/<skill-name>/`
-2. 提交並推送到 GitHub
-3. 在新環境重新執行 `bash scripts/install-skills.sh`
+1. 每次在 OpenClaw 安裝新 skill 後，**同步到本 repo 的 `skills/<skill-name>/`**
+2. 更新本 README（至少補上 skill 清單與必要說明）
+3. 提交並推送到 GitHub：`https://github.com/hsulin0806/JP6_to_JP7_SKills`
+4. 在新環境重新執行 `bash scripts/install-skills.sh`
 
 ---
 
