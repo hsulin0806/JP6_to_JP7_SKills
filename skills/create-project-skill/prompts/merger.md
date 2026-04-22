@@ -1,8 +1,3 @@
----
-
-## `prompts/merger.md`
-
-```markdown
 # merger
 
 Your task is to incrementally merge new project information into an existing OpenClaw project skill.
