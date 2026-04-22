@@ -47,6 +47,10 @@ ls -la ~/.openclaw/workspace/skills
 - `karpathy-guidelines`
 - `image-web-collector`
 
+## 最近驗證紀錄
+
+- 2026-04-22：已在 `/home/ubuntu/.openclaw/workspace` 執行安裝腳本並確認 skills 安裝完成。
+
 ## 維護流程（新增 skill）
 
 1. 把新 skill 放到本 repo 的 `skills/<skill-name>/`
