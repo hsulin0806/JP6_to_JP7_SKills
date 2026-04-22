@@ -8,6 +8,7 @@
 - `karpathy-guidelines`
 - `image-web-collector`
 - `self-improving-agent`
+- `create-project-skill`
 
 ## 專案結構
 
@@ -48,6 +49,7 @@ ls -la ~/.openclaw/workspace/skills
 - `karpathy-guidelines`
 - `image-web-collector`
 - `self-improving-agent`
+- `create-project-skill`
 
 ## 安裝後怎麼用（重要）
 
@@ -64,6 +66,7 @@ openclaw gateway restart
 ## 最近驗證紀錄
 
 - 2026-04-22：已在 `/home/ubuntu/.openclaw/workspace` 執行安裝腳本並確認 skills 安裝完成。
+- 2026-04-22：已從 `/home/ubuntu/Desktop/jp6_to_jp7_skills/skills` 同步並安裝 `create-project-skill`。
 
 ## 維護流程（新增 skill）
 
