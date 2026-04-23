@@ -12,6 +12,7 @@
 - `agent-rate-limiter`
 - `lossless-claw`
 - `ai-project-doc-standard`
+- `create-project-skill_ai`
 
 ## Skills 介紹與說明（統一格式）
 
@@ -51,6 +52,11 @@
 - **用途**：統一撰寫/審稿 AI 專案對外文件（README/官網文檔）
 - **何時用**：新建專案文件、改版公開文件、補模型介紹與硬體驗證資訊時
 - **關鍵價值**：確保文件對外語氣一致、章節完整、可重複套用
+
+### 8) `create-project-skill_ai`
+- **用途**：`create-project-skill` 的嚴格精簡版，強化快速上手與執行一致性
+- **何時用**：需要更快進入 create/update/correct 流程、避免過長規範造成判讀延遲時
+- **關鍵價值**：30 秒 runbook + 明確 DoD，降低交接文件產出歧異
 
 ## 新增 Skill 文件格式規範（必填）
 
@@ -124,6 +130,7 @@ ls -la ~/.openclaw/workspace/skills
 - `agent-rate-limiter`
 - `lossless-claw`
 - `ai-project-doc-standard`
+- `create-project-skill_ai`
 
 ### 安裝後驗證清單（快速）
 
@@ -164,6 +171,8 @@ openclaw gateway restart
 - 2026-04-22：已在 `/tmp/openclaw-skill-verify` 完成安裝驗證，6/6 skills 均檢查到 `SKILL.md`。
 - 2026-04-23：已新增 `ai-project-doc-standard` skill（含文件規範與 README 模板），供後續 AI 專案文件統一套用。
 - 2026-04-23：已再次於 `/tmp/openclaw-skill-verify` 驗證，7/7 skills 均檢查到 `SKILL.md`。
+- 2026-04-23：已新增 `create-project-skill_ai`（由 `create-project-skill` 複製並改為嚴格精簡版流程）。
+- 2026-04-23：已再次於 `/tmp/openclaw-skill-verify` 驗證，8/8 skills 均檢查到 `SKILL.md`。
 
 ## 維護流程（新增 skill）
 
