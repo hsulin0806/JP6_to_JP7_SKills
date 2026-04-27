@@ -78,29 +78,7 @@
 
 ---
 
-## 7. Second Run Check
-
-- [ ] The second-run execution command has been confirmed
-- [ ] It has been confirmed that the second run must not re-download
-- [ ] It has been confirmed that the second run must not re-convert
-- [ ] It has been confirmed that the second run must use existing local models and caches
-- [ ] The second-run evidence is complete
-- [ ] The logs for the second run are traceable
-
----
-
-## 8. Offline Validation Check
-
-- [ ] The offline validation method has been confirmed
-- [ ] The offline condition definition has been confirmed
-- [ ] The offline startup command has been confirmed
-- [ ] The success criteria for offline startup have been confirmed
-- [ ] It has been confirmed that downloading must not occur in offline mode
-- [ ] The offline evidence is complete
-
----
-
-## 9. Camera Validation Check
+## 7. Camera Validation Check
 
 - [ ] The camera validation command has been confirmed
 - [ ] The source of the camera device has been confirmed
@@ -111,7 +89,7 @@
 
 ---
 
-## 10. MP4 Validation Check
+## 8. MP4 Validation Check
 
 - [ ] The MP4 validation command has been confirmed
 - [ ] The source of the MP4 test file has been confirmed
@@ -122,7 +100,7 @@
 
 ---
 
-## 11. Validation Rules Check
+## 9. Validation Rules Check
 
 - [ ] `VALIDATION_RULES.md` has been read
 - [ ] All required pass conditions have been confirmed
@@ -133,10 +111,9 @@
 
 ---
 
-## 12. Failure Knowledge Check
+## 10. Failure Knowledge Check
 
 - [ ] `FAILURES.md` has been read
-- [ ] At least three categories of common errors have been confirmed
 - [ ] It has been confirmed that each error category includes symptoms
 - [ ] It has been confirmed that each error category includes root causes
 - [ ] It has been confirmed that each error category includes diagnostic methods
@@ -144,7 +121,7 @@
 
 ---
 
-## 13. Decision Knowledge Check
+## 11. Decision Knowledge Check
 
 - [ ] `DECISIONS.md` has been read
 - [ ] The major decision items have been confirmed
@@ -155,7 +132,7 @@
 
 ---
 
-## 14. Handoff and Takeover Check
+## 12. Handoff and Takeover Check
 
 - [ ] It has been confirmed that `SKILL.md` can serve as the main entry point
 - [ ] It has been confirmed that `QUICKSTART.md` is sufficient for a new AI Agent to take over immediately
@@ -166,7 +143,7 @@
 
 ---
 
-## 15. Update and Correction Check
+## 13. Update and Correction Check
 
 - [ ] It has been confirmed whether there are new sources waiting to be merged
 - [ ] It has been confirmed whether there is conflicting information waiting to be resolved
@@ -177,7 +154,7 @@
 
 ---
 
-## 16. Final Completion Determination
+## 14. Final Completion Determination
 
 This project can be considered handoff-ready only when all of the following conditions are satisfied:
 

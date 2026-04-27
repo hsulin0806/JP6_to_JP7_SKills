@@ -62,16 +62,15 @@ You need to complete all of the following:
 3. All additions, modifications, and trade-offs must be documented and recorded in decision logs.
 4. If `${REQUIRE_CONTAINER}` is `true`, the executable program must be packaged inside a Docker image.
 5. Except for mounted data, models, caches, and output directories, execution must not depend on source code or pre-staged program files on the host.
-6. If `${REQUIRE_OFFLINE}` is `true`, offline validation must be completed.
-7. Every declaration of "completed" or "validated" must include:
+6. Every declaration of "completed" or "validated" must include:
    - the corresponding command
    - return code or success signal
    - log summary
    - artifact location
    - version or image tag
-8. If information is insufficient, it must be marked as pending completion. Do not fabricate anything.
-9. Do not stop because one path fails. You must continue searching for alternatives.
-10. Do not preserve only successful experience. You must also capture failure knowledge.
+7. If information is insufficient, it must be marked as pending completion. Do not fabricate anything.
+8. Do not stop because one path fails. You must continue searching for alternatives.
+9. Do not preserve only successful experience. You must also capture failure knowledge.
 
 ---
 
@@ -102,11 +101,9 @@ Until Step 0 is completed, you must not declare that formal validation has start
 1. Before the first run, the host must not need any pre-staged project files unless `project_vars.env` explicitly states such prerequisites.
 2. During the first run, necessary downloading, building, conversion, initialization, and loading are allowed. After completion, all required artifacts must be stored in:
    `${PERSISTENT_ROOT}/${PROJECT_NAME}`
-3. Starting from the second run, there must be no repeated unnecessary downloading, conversion, initialization, or rebuilding.
-4. If `${REQUIRE_OFFLINE}` is `true`, the second run must be able to start normally without network access.
-5. All validations listed in `${INPUT_VALIDATIONS}` must be completed.
-6. If `${REQUIRE_CONTAINER}` is `true`, the formal delivery must be container-based. A temporary success achieved only through an interactive shell is not acceptable.
-7. After completion, push to `${PRIVATE_REPO}`. If pushing is not possible, you must still reach a ready-to-push state.
+3. All validations listed in `${INPUT_VALIDATIONS}` must be completed.
+4. If `${REQUIRE_CONTAINER}` is `true`, the formal delivery must be container-based. A temporary success achieved only through an interactive shell is not acceptable.
+5. After completion, push to `${PRIVATE_REPO}`. If pushing is not possible, you must still reach a ready-to-push state.
 
 ---
 
@@ -119,14 +116,11 @@ Until Step 0 is completed, you must not declare that formal validation has start
    - Directory Layout
    - Build
    - First Run
-   - Second Run
-   - Offline Run
    - Validation
-   - Troubleshooting
    - See Also
 
 2. `docs/BUILD_AND_RUN_GUIDE.md`
-   - The full process from environment setup, build, startup, validation, to offline execution
+   - The full process from environment setup, build, startup, and validation
 
 3. `docs/MIGRATION_OR_IMPLEMENTATION_NOTES.md`
    - Must record:
@@ -143,7 +137,6 @@ Until Step 0 is completed, you must not declare that formal validation has start
      - Task judgment
      - Environment assumptions
      - Recommended workflow
-     - Common errors
      - Troubleshooting order
      - Validation checklist
      - Priority order of authoritative sources
@@ -154,8 +147,6 @@ Until Step 0 is completed, you must not declare that formal validation has start
 
 7. `validation/`
    - `FIRST_RUN.md`
-   - `SECOND_RUN.md`
-   - `OFFLINE_RUN.md` (if `${REQUIRE_OFFLINE}` is `true`)
    - `${INPUT_VALIDATION_FILE_1}`
    - `${INPUT_VALIDATION_FILE_2}`
    - `ENVIRONMENT_FINGERPRINT.md`
@@ -207,19 +198,6 @@ It must record:
 - Artifact locations
 - Version or image tag used
 
-### SECOND_RUN.md
-It must prove:
-- Successful execution using existing local artifacts
-- No repeated unnecessary downloading, conversion, initialization, or rebuilding
-- The locations of local resources used
-
-### OFFLINE_RUN.md
-If `${REQUIRE_OFFLINE}` is `true`, it must prove:
-- Successful startup without network access
-- No re-downloading
-- No re-conversion
-- Successful startup using existing local artifacts
-
 ### Each INPUT VALIDATION file
 It must include:
 - Test command
@@ -256,8 +234,6 @@ This task is considered complete only when all of the following are true:
 
 - The project runs normally on `${TARGET_PLATFORM}` / `${TARGET_VERSION}`
 - All `${INPUT_VALIDATIONS}` have passed
-- The second run does not repeat unnecessary downloading, conversion, initialization, or rebuilding
-- If `${REQUIRE_OFFLINE}` is `true`, offline startup validation has passed
 - README / guides / notes / SKILL / CHECKLIST / ENTRYPOINT / validation documents are complete
 - Every "completed" or "validated" conclusion includes commands, log summaries, and artifact locations
 - The code and documents have been pushed to the designated repository, or a ready-to-push state has been reached with the blocking reason fully documented

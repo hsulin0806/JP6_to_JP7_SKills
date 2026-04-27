@@ -46,45 +46,7 @@ This project may be declared complete only when all of the following conditions 
 
 ---
 
-## Validation Item 3: Second Run Succeeds
-
-### Validation Goal
-{{second_run_validation_goal}}
-
-### Validation Command
-{{second_run_validation_command}}
-
-### Expected Result
-{{second_run_expected_result}}
-
-### Evidence Location
-{{second_run_evidence_location}}
-
-### Failure Conditions
-{{second_run_failure_conditions}}
-
----
-
-## Validation Item 4: Offline Startup Succeeds
-
-### Validation Goal
-{{offline_validation_goal}}
-
-### Validation Command
-{{offline_validation_command}}
-
-### Expected Result
-{{offline_expected_result}}
-
-### Evidence Location
-{{offline_evidence_location}}
-
-### Failure Conditions
-{{offline_failure_conditions}}
-
----
-
-## Validation Item 5: Camera Validation Succeeds
+## Validation Item 3: Camera Validation Succeeds
 
 ### Validation Goal
 {{camera_validation_goal}}
@@ -103,7 +65,7 @@ This project may be declared complete only when all of the following conditions 
 
 ---
 
-## Validation Item 6: MP4 Validation Succeeds
+## Validation Item 4: MP4 Validation Succeeds
 
 ### Validation Goal
 {{mp4_validation_goal}}

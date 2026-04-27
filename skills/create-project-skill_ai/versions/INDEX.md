@@ -6,6 +6,17 @@ This file tracks version updates for `create-project-skill_ai`.
 
 ---
 
+## v1.2.0
+
+### Contents
+- Removed second-run requirements from project skill templates
+- Removed offline-run requirements from project skill templates
+- Removed mandatory common-FAQ style requirements from related templates/prompts
+- Updated universal execution prompt to stop requiring second/offline run artifacts
+
+### Notes
+- Aligns with updated project policy: only first-run + core validation are required by default
+
 ## v1.1.0
 
 ### Contents

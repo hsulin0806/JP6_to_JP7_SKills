@@ -136,25 +136,6 @@ For future AI Agents or new maintainers, understand this project in the followin
 
 ---
 
-## Second Run / Offline Workflow
-
-### Purpose
-{{second_run_goal}}
-
-### Execution Method
-{{second_run_steps}}
-
-### Expected Behavior
-{{second_run_expected_behavior}}
-
-### Forbidden Behavior
-{{second_run_forbidden_behavior}}
-
-### Evidence to Retain
-{{second_run_evidence}}
-
----
-
 ## Validation Rules
 
 ### Required Pass Items
@@ -168,28 +149,6 @@ For future AI Agents or new maintainers, understand this project in the followin
 
 ### Evidence Locations
 {{validation_evidence_locations}}
-
----
-
-## Common Errors and Troubleshooting Order
-
-### Error 1
-- Symptom: {{failure_1_symptom}}
-- Root Cause: {{failure_1_root_cause}}
-- Diagnosis: {{failure_1_diagnosis}}
-- Correct Fix: {{failure_1_fix}}
-
-### Error 2
-- Symptom: {{failure_2_symptom}}
-- Root Cause: {{failure_2_root_cause}}
-- Diagnosis: {{failure_2_diagnosis}}
-- Correct Fix: {{failure_2_fix}}
-
-### Error 3
-- Symptom: {{failure_3_symptom}}
-- Root Cause: {{failure_3_root_cause}}
-- Diagnosis: {{failure_3_diagnosis}}
-- Correct Fix: {{failure_3_fix}}
 
 ---
 

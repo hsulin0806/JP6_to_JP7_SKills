@@ -93,12 +93,11 @@ Classify into:
 6. quick handoff flow
 7. build flow
 8. first-run flow
-9. second-run/offline flow
-10. validation rules
-11. troubleshooting and common errors
-12. key decisions
-13. known limitations
-14. update procedure
+9. validation rules
+10. failure knowledge
+11. key decisions
+12. known limitations
+13. update procedure
 
 ### Step 4: Generate each output file
 
