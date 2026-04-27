@@ -64,6 +64,9 @@ Any successful merge must:
 - Preserve a snapshot of the previous version
 - Write an update summary
 
+### Principle 5: Protect self-contained deployability
+If new changes introduce build-time/runtime source clone dependencies, treat this as a high-risk change. Prefer vendoring required sources or explicitly recording exception and impact.
+
 ---
 
 ## Merge Workflow
@@ -157,6 +160,9 @@ Add new sources.
 #### `CORRECTIONS.md`
 All critical corrections must be written here.
 
+#### Documentation standards/templates (when applicable)
+If new lessons are reusable across projects, update `AI_PROJECT_DOC_STANDARD.md` and `AI_PROJECT_README_TEMPLATE.md` (or record why skipped).
+
 ### Step 6: Create a version
 Create a new version folder or version record that includes at least:
 
@@ -241,3 +247,4 @@ The merge is considered complete only if all of the following conditions are met
 5. `CORRECTIONS.md` has been updated
 6. A new version has been created
 7. A future AI Agent can still take over clearly
+8. For container projects: runtime evidence confirms `docker compose ps -a` target service is `Up`

@@ -55,6 +55,9 @@ Do not finish unless all pass:
 - Corrections-tracked: conflicts/corrections recorded in `CORRECTIONS.md`.
 - Versioned: new version entry created with summary + affected files.
 - Takeover-ready: next AI can start from `QUICKSTART.md` without chat history.
+- Dependency-self-contained: avoid runtime/build-time `git clone` of core app sources; if unavoidable, record explicit reason and risk.
+- Runtime-proof (container projects): include evidence for `docker build` success, `docker compose up -d` success, and `docker compose ps -a` = `Up`.
+- Public-doc-sync: when reusable doc lessons appear, update `AI_PROJECT_DOC_STANDARD.md` + `AI_PROJECT_README_TEMPLATE.md` (or record why not).
 
 ## Authority order for conflicts
 

@@ -45,6 +45,15 @@ Keep completion criteria in `VALIDATION_RULES.md`.
 ### Principle 5: Keep traceability
 Keep source traceability through `SOURCES.md` and `EVIDENCE_INDEX.md`.
 
+### Principle 6: Prefer self-contained delivery
+For deployable repos, prefer vendoring required runtime source files into the target repo over build-time/runtime git clone dependencies.
+
+### Principle 7: Require runtime proof for containerized projects
+For container projects, completion claims must include evidence for:
+- `docker build` success
+- `docker compose up -d` success
+- `docker compose ps -a` showing target service `Up`
+
 ---
 
 ## Build Process
@@ -143,6 +152,9 @@ Do not mark complete unless all are true:
 6. Environment fingerprint exists
 7. Quickstart path exists
 8. Next AI agent can directly take over
+9. (Container projects) build + compose + ps `Up` evidence is captured
+10. Dependency strategy is explicit (self-contained or justified exception)
+11. Reusable doc lessons are propagated to documentation standard/template or recorded as N/A
 
 ### Step 6: Versioning
 Create initial version record (`v1.0.0`) with:
